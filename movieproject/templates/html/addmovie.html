@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+</head>
+<body>
+    {% extends 'html/index.html' %}
+    {% block content %}
+        <div class="container" align="center">
+            <h1>Add Movie Information</h1>
+            <form method="post">
+                {{form.as_p}}
+                {%csrf_token%}
+                <input type="submit" class="'btn btn-primary" value="Add Movies">
+            </form>
+        </div>
+    {% endblock %}
+</body>
+</html>
